@@ -1,6 +1,6 @@
 'use strict';
 
-function Clouds(canvas,y){
+function Cloud(canvas){
     this.speed = 3;
     this.size = 50;
     this.direction = +1;
@@ -10,7 +10,12 @@ function Clouds(canvas,y){
     this.y = 50;
 }
 
-Clouds.prototype.draw = function(){
+Cloud.prototype.draw = function(){
     this.ctx.fillStyle = 'lightblue';
     this.ctx.fillRect(this.x, this.y, this.size, this.size);
+}
+
+
+Cloud.prototype.update = function(){
+    this.x = this.x + this.direction * this.speed;
 }

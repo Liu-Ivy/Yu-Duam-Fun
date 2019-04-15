@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 function main() {
 
@@ -27,10 +27,12 @@ function main() {
     const gameScreen = buildDom(`
       <section class="game-container">
         <canvas></canvas>
+        <button class='endGame'>The End</button>
       </section>
     `);
 
     const gameContainerElement = document.querySelector('.game-container')
+    const endGameButton = document.querySelector('.endGame')
 
     const width = gameContainerElement.offsetWidth;
     const height = gameContainerElement.offsetHeight;
@@ -40,10 +42,33 @@ function main() {
     canvasElement.setAttribute('width', width);
     canvasElement.setAttribute('height', height);
 
+    let game = new Game(canvasElement);
     
-  }
+    game.startLoop();
 
-  makeSplashScreen();
+    document.addEventListener('keydown',function(event){
+      console.log(game.player.setDirection)
+      if(event.keyCode === 38){
+          game.player.setDirection.call(game.player,-1)
+          game.player.jump.call(game.player);
+      }else if(event.keyCode === 40){
+          game.player.setDirection(1)
+          
+      }
+    })
+
+    endGameButton.addEventListener('click', function () {
+      game.endGame.call(game);
+    });
+
+  //  document.addEventListener('keyup',function(event){ 
+  //     if(event.keyCode === 38 || event.keyCode === 40){
+  //         game.player.setDirection(0);
+
+  // }
+//})
+
 }
-
+makeSplashScreen();
+}
 window.addEventListener('load', main);
