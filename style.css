@@ -52,7 +52,7 @@ html {
   .container {
     widows: 800px;
     height: 550px;
-    background-image: url("images.jpg/tooopen_sy_162242491354.jpg");
+    background-image: url("images/tooopen_sy_162242491354.jpg");
   }
   
   .section {
@@ -91,5 +91,5 @@ html {
     width: 100%;
     height: 90vh;
     border: 2px solid darkblue;
-    background-image: url("images.jpg/tooopen_sy_162242491354.jpg");
+    background-image: url("images/tooopen_sy_162242491354.jpg");
   }
