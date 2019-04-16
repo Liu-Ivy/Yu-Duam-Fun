@@ -27,7 +27,7 @@ function main() {
     const gameScreen = buildDom(`
       <section class="game-container">
         <canvas></canvas>
-        <button class='endGame'>The End</button>
+        <button class='endGame'>Pause</button>
       </section>
     `);
 
@@ -45,9 +45,9 @@ function main() {
     let game = new Game(canvasElement);
     
     game.startLoop();
+    game.setGamerOverCallback(buildGameOverScreen)
 
     document.addEventListener('keydown',function(event){
-      console.log(game.player.setDirection)
       if(event.keyCode === 38){
           game.player.setDirection.call(game.player,-1)
           game.player.jump.call(game.player);
@@ -59,16 +59,21 @@ function main() {
 
     endGameButton.addEventListener('click', function () {
       game.endGame.call(game);
-    });
-
-  //  document.addEventListener('keyup',function(event){ 
-  //     if(event.keyCode === 38 || event.keyCode === 40){
-  //         game.player.setDirection(0);
-
-  // }
-//})
-
+    }) 
 }
+
+function buildGameOverScreen (){
+  const gameOverScreen = buildDom(`
+   <section>
+   <h1>Game Over</h1>
+   <button class="restart-button">Restart</button>
+   </section>
+  `)
+  const restartButton=document.querySelector('.restart-button');
+  restartButton.addEventListener('click', makeSplashScreen);
+} 
+
 makeSplashScreen();
+
 }
 window.addEventListener('load', main);
