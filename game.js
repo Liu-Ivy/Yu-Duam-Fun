@@ -11,6 +11,8 @@ function Game(canvas) {
     this.ctx = this.canvas.getContext('2d');
     this.gameOver = false;
     this.hearts = [];
+    //this.soundEffect = new Audio('sound/background-first.mp3');
+    //this.soundEffect1 = new Audio1('sound/background.mp3')
     
   };
 

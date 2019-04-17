@@ -9,6 +9,7 @@ function Player(canvas){
     this.speed = 3;
     this.direction = 0;
     this.isJumping = null;
+    this.soundEffect = new Audio('sound/effect-panda.mp3')
     this.isTouchingCloud = false;
 }
 
@@ -60,6 +61,7 @@ Player.prototype.setDirection = function(direction){
 
 Player.prototype.jump = function(){
     this.isJumping = true;
+    this.soundEffect.play();
     this.isTouchingCloud = false;
 }
 

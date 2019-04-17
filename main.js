@@ -14,6 +14,7 @@ function main() {
     const splashScreen = buildDom(`
       <section>
         <h1>云 端 Fun</h1>
+        
         <button class="start-button">Start</button>
       </section>
     `);
@@ -66,6 +67,7 @@ function buildGameOverScreen (){
   const gameOverScreen = buildDom(`
    <section>
    <h1>Game Over</h1>
+   <img src:'./images/heart.png.'>
    <button class="restart-button">Restart</button>
    </section>
   `)

@@ -54,6 +54,7 @@ html {
   
   
   .container {
+    display:flex;
     widows: 800px;
     height: 500px;
     background-image: url("images/tooopen_sy_162242491354.jpg");
