@@ -12,11 +12,16 @@ function main() {
 
   function makeSplashScreen() {
     const splashScreen = buildDom(`
-      <section>
+    <section>
+      <div class="splash-text">
         <h1>云 端 Fun</h1>
-        
+      </div>
+      <div class="start-button-container">
         <button class="start-button">Start</button>
-      </section>
+      </div>  
+        <iframe src="./sound/background-first.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+        </iframe>
+    </section>
     `);
 
     const startButton = document.querySelector('.start-button');
@@ -27,7 +32,9 @@ function main() {
   function makeGameScreen() {
     const gameScreen = buildDom(`
       <section class="game-container">
-        <canvas></canvas>
+      <iframe src="./sound/background.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+        </iframe>
+        <canvas width="722"></canvas>
         <button class='endGame'>Pause</button>
       </section>
     `);
@@ -65,11 +72,17 @@ function main() {
 
 function buildGameOverScreen (){
   const gameOverScreen = buildDom(`
-   <section>
-   <h1>Game Over</h1>
-   <img src:'./images/heart.png.'>
-   <button class="restart-button">Restart</button>
-   </section>
+  <section>
+  <div class="gameover-text">
+      <h1>Game Over</h1>
+  </div>
+  <div class="gameover-img">
+    <img src="./images/gameover.png">
+  </div>
+  <div class="gameover-btn">
+  <button class="restart-button">Restart</button>
+  </div>
+</section>
   `)
   const restartButton=document.querySelector('.restart-button');
   restartButton.addEventListener('click', makeSplashScreen);

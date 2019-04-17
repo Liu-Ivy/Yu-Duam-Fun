@@ -8,10 +8,39 @@ html {
   }
   
   body {
-    margin: 0;
-    padding: 0;
+    background-image: url("images/tooopen_sy_162242491354.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100vh;
   }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .gameover-text {
+    font-size: 30pt;
+    padding-top: 150px;
+  }
+  .gameover-img img {
+    height: 120px;
+    width: 200px;
+    align-items: center;
   
+  }
+  .restart-button {
+    width: 180px;
+    height: 60px;
+    align-items: center;
+    font-size: 25pt;
+    background-color:rgb(33, 31, 31);
+    border: 2px solid white;
+    border-radius: 12px;
+    color:white;
+    margin-top: 50px;
+  
+  }
   
   /* ---- typography ---- */
   
@@ -28,13 +57,13 @@ html {
   }
 
   h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20pt;
-    position: absolute;
-    left:45%;
-    top:20%;
-  }
 
+  }
+.splash-text {
+  padding-top: 30vh;
+}
   
 
   .start-button {
@@ -47,9 +76,6 @@ html {
     border-radius: 12px;
     color:darkblue;
     margin: 5px;
-    position: absolute;
-    left:40%;
-    top:30%;
   }
   
   
@@ -57,7 +83,7 @@ html {
     display:flex;
     widows: 800px;
     height: 500px;
-    background-image: url("images/tooopen_sy_162242491354.jpg");
+    
   }
   
   .section {
@@ -95,6 +121,6 @@ html {
   .game-container {
     width: 100%;
     height: 90vh;
-    border: 3px solid rgb(4, 4, 75);
+    border: 0px solid rgb(4, 4, 75);
     background-image: url("images/tooopen_sy_162242491354.jpg");
   }
