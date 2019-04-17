@@ -93,9 +93,10 @@ Game.prototype.checkCollision = function(){
       this.clouds.splice(index, 1);
     }
      else if (isColliding && this.player.isTouchingCloud === false){
-      
+      console.log(index)
        this.player.isTouchingCloud = true;
      this.player.setLives();
+     this.clouds.splice(index, 1);
      this.hearts.splice(0,1)
 
      if(this.player.lives === 0){

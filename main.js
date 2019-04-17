@@ -35,7 +35,7 @@ function main() {
       <iframe src="./sound/background.mp3" allow="autoplay" style="display:none" id="iframeAudio">
         </iframe>
         <canvas width="722"></canvas>
-        <button class='endGame'>Pause</button>
+        <!--<button class='endGame'>Pause</button>-->
       </section>
     `);
 
@@ -57,17 +57,20 @@ function main() {
 
     document.addEventListener('keydown',function(event){
       if(event.keyCode === 38){
-          game.player.setDirection.call(game.player,-1)
-          game.player.jump.call(game.player);
+          game.player.setDirection(-1)
+          // game.player.setDirection.call(game.player,-1)
+          game.player.jump();
+          // game.player.jump.call(game.player);
       }else if(event.keyCode === 40){
           game.player.setDirection(1)
+          // game.player.setDirection(1)
           
       }
     })
 
-    endGameButton.addEventListener('click', function () {
-      game.endGame.call(game);
-    }) 
+    // endGameButton.addEventListener('click', function () {
+    //   game.endGame.call(game);
+    // }) 
 }
 
 function buildGameOverScreen (){

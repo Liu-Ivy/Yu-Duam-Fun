@@ -14,10 +14,10 @@ function Cloud(canvas,imgLink, type){
 }
 
 Cloud.prototype.draw = function(){
+    this.ctx.fillRect(this.x, this.y, this.size, this.size);
     this.ctx.drawImage(this.img,this.x, this.y, this.size, this.size);
 
     //this.ctx.fillStyle = 'lightblue';
-    //this.ctx.fillRect(this.x, this.y, this.size, this.size);
 }
 
 
