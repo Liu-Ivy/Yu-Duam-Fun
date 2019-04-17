@@ -1,14 +1,15 @@
 'use strict';
 function Player(canvas){
-    this.lives =3;
-    this.size = 120;
+    this.lives =5;
+    this.size = 140;
     this.canvas = canvas;
     this.x = this.canvas.width/2;
-    this.y = 500;
+    this.y = 450;
     this.ctx = this.canvas.getContext('2d');
     this.speed = 3;
     this.direction = 0;
     this.isJumping = null;
+    this.isTouchingCloud = false;
 }
 
 Player.prototype.draw = function() {
@@ -18,12 +19,13 @@ Player.prototype.draw = function() {
    
 }
 Player.prototype.update = function(){
-    if(this.y < 95) {
+    if(this.y < 85) {
         this.isJumping=false;
         this.setDirection(1)
         this.y++
+        this.isTouchingCloud = false;
     }
-    if (this.y > 550 && !this.isJumping){
+    if (this.y > 500 && !this.isJumping){
         this.setDirection(0)
     }
     if(this.isJumping){
@@ -41,6 +43,7 @@ Player.prototype.setDirection = function(direction){
 
 Player.prototype.jump = function(){
     this.isJumping = true;
+    this.isTouchingCloud = false;
 }
 
 Player.prototype.setLives = function(){

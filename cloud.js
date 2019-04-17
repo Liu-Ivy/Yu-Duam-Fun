@@ -9,7 +9,7 @@ function Cloud(canvas,imgLink, type){
     this.img.src = imgLink;
     this.ctx = this.canvas.getContext('2d');
     this.x = 0;
-    this.y = 70;
+    this.y = 55;
     this.type = type;
 }
 
