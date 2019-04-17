@@ -10,26 +10,29 @@ function Game(canvas) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
     this.gameOver = false;
+    this.hearts = [];
     
-   
   };
 
- 
-  
  Game.prototype.startLoop = function(){
 
      this.player = new Player(this.canvas);
+
+     for(let i =0; i < this.player.lives; i++) {
+      this.hearts.push(new Heart(this.canvas, 520 + 40*i))
+    }
   
       this.interval = setInterval(()=>{this.makeClouds(this.clouds)}, 1750)
       const loop = () => {
-  
+   
         // if(Math.random() > 0.999 ){
         //   this.clouds.push(new Cloud(this.canvas, "images/HUO.png"));
         // }
         // if(Math.random() > 0.999){
         //   this.clouds.push(new Cloud(this.canvas, "images.jpg/MU.png"));
         // }
-     // this.interval = setInterval(()=>{this.makeMatchingCard(this.matchingCard)})
+       
+        
         this.clearCanvas();
         this.updateCanvas();
         this.drawCanvas();
@@ -52,7 +55,6 @@ Game.prototype.updateCanvas = function(){
   this.clouds.forEach(function(cloud){
    cloud.update();
 })
-
 }
 
 Game.prototype.drawCanvas = function(){ 
@@ -60,6 +62,10 @@ Game.prototype.drawCanvas = function(){
   this.matchingCard.draw();
   this.clouds.forEach(function(cloud){
     cloud.draw();
+
+   })
+  this.hearts.forEach(function(heart){
+   heart.draw();
   })
 }
 
@@ -75,10 +81,7 @@ Game.prototype.makeClouds = function(clouds) {
   let type = randomPick.split('images/')[1].split('.')[0];
   clouds.push(new Cloud(this.canvas, randomPick, type))
 }
-//Game.prototype.makeMatchingCard = function(machingClouds){
-  //this.characters.forEach()
 
-//}
 
 Game.prototype.checkCollision = function(){
   this.clouds.forEach((cloud,index)=>{
@@ -88,9 +91,11 @@ Game.prototype.checkCollision = function(){
       this.clouds.splice(index, 1);
     }
      else if (isColliding && this.player.isTouchingCloud === false){
-       console.log('wrong word')
+      
        this.player.isTouchingCloud = true;
      this.player.setLives();
+     this.hearts.splice(0,1)
+
      if(this.player.lives === 0){
       this.gameOver = true;
       this.endGameAndBuildScreen();

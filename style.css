@@ -31,18 +31,22 @@ html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     font-size: 20pt;
     position: absolute;
-    left:35%;
+    left:45%;
     top:20%;
   }
+
+  
 
   .start-button {
     width: 180px;
     height: 60px;
     align-items: center;
     font-size: 25pt;
-    background-color: rgba(196, 202, 205, 0.838);
+    background-color: transparent;
+    border: 2px solid rgb(24, 69, 84);
     border-radius: 12px;
-    margin: 20px;
+    color:darkblue;
+    margin: 5px;
     position: absolute;
     left:40%;
     top:30%;

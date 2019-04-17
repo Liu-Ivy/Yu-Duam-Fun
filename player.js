@@ -1,7 +1,7 @@
 'use strict';
 function Player(canvas){
-    this.lives =5;
-    this.size = 140;
+    this.lives = 5;
+    this.size = 150;
     this.canvas = canvas;
     this.x = this.canvas.width/2;
     this.y = 450;
@@ -18,6 +18,23 @@ Player.prototype.draw = function() {
     this.ctx.drawImage(imgPlayer, this.x - this.size/2, this.y - this.size/2, this.size,this.size);
    
 }
+
+// Player.prototype.drawHeart = function(){
+//     let imgHeart = new Image();
+//     imgHeart.src = "images/heart.png";
+//     this.ctx.drawImage(imgHeart, 50, 400, 25, 25);
+
+//     if (this.lives >= 5){
+//         this.lives1 = this.ctx.drawImage(imgHeart,10 ,10, 25, 25);
+//         this.lives2 = this.ctx.drawImage(imgHeart,40 ,10, 25, 25);
+//         this.lives3 = this.ctx.drawImage(imgHeart,40 ,10, 25, 25);
+//         this.lives4 = this.ctx.drawImage(imgHeart,40 ,10, 25, 25);
+//         this.lives5 = this.ctx.drawImage(imgHeart,40 ,10, 25, 25);
+//     }
+//     if (this.lives >=4) {}
+//}
+
+
 Player.prototype.update = function(){
     if(this.y < 85) {
         this.isJumping=false;
