@@ -25,7 +25,7 @@ function Game(canvas) {
       console.log(this.hearts)
     }
   
-      this.interval = setInterval(()=>{this.makeClouds(this.clouds)}, 1500)
+      this.interval = setInterval(()=>{this.makeClouds(this.clouds)}, 1200)
       const loop = () => {
    
         // if(Math.random() > 0.999 ){
