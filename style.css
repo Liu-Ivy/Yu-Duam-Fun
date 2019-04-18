@@ -21,12 +21,15 @@ html {
     width: 100%;
   }
   .gameover-text {
-    font-size: 30pt;
-    padding-top: 150px;
+    font-size: 3rem;
+    padding-top: 120px;
+    color:rgb(50, 47, 47);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
   }
   .gameover-img img {
-    height: 120px;
-    width: 200px;
+    height: 180px;
+    width: 280px;
     align-items: center;
   
   }

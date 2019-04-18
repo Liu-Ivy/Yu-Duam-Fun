@@ -19,8 +19,12 @@ function main() {
       <div class="start-button-container">
         <button class="start-button">Start</button>
       </div>  
-        <iframe src="./sound/background-first.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+        <iframe src="./sound/background-first.mp3"  allow="autoplay" style="display:none" id="iframeAudio">
         </iframe>
+        <audio autoplay loop  id="playAudio">
+            <source src="./sound/background-first.mp3">
+        </audio>
+        
     </section>
     `);
 
@@ -32,9 +36,13 @@ function main() {
   function makeGameScreen() {
     const gameScreen = buildDom(`
       <section class="game-container">
-      <iframe src="./sound/background.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+        <iframe src="./sound/background.mp3" allow="autoplay" style="display:none" id="iframeAudio">
         </iframe>
+        <audio autoplay loop  id="playAudio">
+            <source src="./sound/background.mp3">
+        </audio>
         <canvas width="722"></canvas>
+        
         <!--<button class='endGame'>Pause</button>-->
       </section>
     `);
@@ -76,12 +84,18 @@ function main() {
 function buildGameOverScreen (){
   const gameOverScreen = buildDom(`
   <section>
+
+  <iframe src="./sound/gameoverSound.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe>
+ 
   <div class="gameover-text">
-      <h1>Game Over</h1>
+  <h1>Game Over</h1>
   </div>
+
   <div class="gameover-img">
-    <img src="./images/gameover.png">
+  <img src="./images/gameover.png">
   </div>
+
   <div class="gameover-btn">
   <button class="restart-button">Restart</button>
   </div>

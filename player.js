@@ -1,6 +1,6 @@
 'use strict';
 function Player(canvas){
-    this.lives = 5;
+    this.lives = 4;
     this.size = 150;
     this.canvas = canvas;
     this.x = this.canvas.width/2;
@@ -16,7 +16,7 @@ function Player(canvas){
 Player.prototype.draw = function() {
     let imgPlayer = new Image();
     imgPlayer.src = "images/kung_fu_panda.png"; 
-    this.ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size,this.size)
+    //this.ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size,this.size)
     this.ctx.drawImage(imgPlayer, this.x - this.size/2, this.y - this.size/2, this.size,this.size);
    
 }
