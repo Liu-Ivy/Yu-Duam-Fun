@@ -2,7 +2,7 @@
 
 function Cloud(canvas,imgLink, type){
     this.speed = 4;
-    this.size = 100;
+    this.size = 110;
     this.direction = 1;
     this.canvas = canvas;
     this.img = new Image();

@@ -1,7 +1,7 @@
 'use strict';
 function Player(canvas){
     this.lives = 4;
-    this.size = 180;
+    this.size = 185;
     this.canvas = canvas;
     this.x = this.canvas.width/2;
     this.y = 450;
