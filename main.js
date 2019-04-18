@@ -22,7 +22,7 @@ function main() {
         <iframe src="./sound/background-first.mp3"  allow="autoplay" style="display:none" id="iframeAudio">
         </iframe>
         <audio autoplay loop  id="playAudio">
-            <source src="./sound/background-first.mp3">
+            <source src="sound/background-first.mp3">
         </audio>
         
     </section>
