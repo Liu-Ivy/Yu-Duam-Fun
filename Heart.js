@@ -1,11 +1,11 @@
 'use strict';
 
 function Heart(canvas, x){
-    this.size = 35;
+    this.size = 45;
     this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
-    this.x = x;
-    this.y = 540;
+    this.x = this.canvas.width - this.size * x - 70;
+    this.y = this.canvas.height - 50;
     this.img = new Image();
     this.img.src = 'images/heart.png';
 

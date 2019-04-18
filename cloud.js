@@ -1,7 +1,7 @@
 'use strict';
 
 function Cloud(canvas,imgLink, type){
-    this.speed = 3;
+    this.speed = 4;
     this.size = 100;
     this.direction = 1;
     this.canvas = canvas;

@@ -20,11 +20,12 @@ function Game(canvas) {
 
      this.player = new Player(this.canvas);
 
-     for(let i =0; i < this.player.lives; i++) {
-      this.hearts.push(new Heart(this.canvas, 520 + 40*i))
+     for(let i =1; i < this.player.lives +1; i++) {
+      this.hearts.push(new Heart(this.canvas, i* 1.2))
+      console.log(this.hearts)
     }
   
-      this.interval = setInterval(()=>{this.makeClouds(this.clouds)}, 1750)
+      this.interval = setInterval(()=>{this.makeClouds(this.clouds)}, 1500)
       const loop = () => {
    
         // if(Math.random() > 0.999 ){

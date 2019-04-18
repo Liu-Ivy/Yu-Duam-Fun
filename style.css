@@ -85,8 +85,8 @@ html {
   
   .container {
     display:flex;
-    widows: 800px;
-    height: 500px;
+    height: 100%;
+    margin: 0;
     
   }
   
@@ -95,12 +95,12 @@ html {
     padding-top: 20px;
   }
   
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     .container {
       max-width: 728px;
       margin: 0 auto;
     }
-  }
+  } */
   
   
   
@@ -127,4 +127,6 @@ html {
     height: 90vh;
     border: 0px solid rgb(4, 4, 75);
     background-image: url("images/tooopen_sy_162242491354.jpg");
+    background-size: cover;
+    margin-top: 20px;
   }

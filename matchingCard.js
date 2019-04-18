@@ -2,11 +2,11 @@
 
 function matchingCard(canvas, type){
     this.speed = 3;
-    this.size = 140;
+    this.size = 170;
     this.canvas = canvas;
     this.img = new Image();
     this.ctx = this.canvas.getContext('2d');
-    this.x = 20;
+    this.x = 80;
     this.y = 450;
     this.imgName = type
     this.type = type.split('2')[0];

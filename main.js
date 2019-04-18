@@ -41,7 +41,7 @@ function main() {
         <audio autoplay loop  id="playAudio">
             <source src="./sound/background.mp3">
         </audio>
-        <canvas width="722"></canvas>
+        <canvas></canvas>
         
         <!--<button class='endGame'>Pause</button>-->
       </section>
