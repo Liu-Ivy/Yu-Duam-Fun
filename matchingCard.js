@@ -2,7 +2,7 @@
 
 function matchingCard(canvas, type){
     this.speed = 3;
-    this.size = 150;
+    this.size = 180;
     this.canvas = canvas;
     this.img = new Image();
     this.ctx = this.canvas.getContext('2d');
